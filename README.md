@@ -84,28 +84,6 @@ else:
     print(f"Generation failed: {result.message}")
 ```
 
-## Project Structure
-
-```
-AuDirector/
-├── workflow.py          # Main workflow orchestration
-├── run.py              # Command-line interface
-├── config.py           # Configuration classes
-├── config.json         # API and audio configuration
-├── llm.py              # LLM service integration
-├── generator.py        # Audio generation components
-├── mix.py              # Audio mixing utilities
-├── api.py              # API client functions
-├── utils.py            # Utility functions
-├── prompts/            # LLM prompt templates
-│   ├── 1.prompt_en     # Content structure generation
-│   ├── 2.prompt_en     # Dialogue generation
-│   └── 3.prompt        # Audio script generation
-├── Voice_Library/      # Voice reference library
-├── model/              # Model configurations
-└── demo/               # Example outputs
-```
-
 ## Workflow Steps
 
 1. **Content Generation**: Transform user input into structured dialogue format
