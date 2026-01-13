@@ -1,5 +1,5 @@
 # AuDirector: A Self-Reflective Closed-Loop Framework for Immersive Audio Storytelling
-
+[Demo Page](https://riddae.github.io/AuDirector_demopage/) | [Paper](https://arxiv.org/)
 ## Abstract
 Despite advances in text and visual generation, creating coherent long-form audio narratives remains challenging. Existing frameworks often exhibit limitations such as mismatched character settings with voice performance, insufficient self-correction mechanisms, and limited human interactivity.
 
