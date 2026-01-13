@@ -290,58 +290,6 @@ if __name__ == "__main__":
     print("LLM Service Test Examples")
     print("=" * 40)
 
-    # Test text generation (commented out to avoid API calls)
-    # prompt_text = Path("prompts/sample.prompt").read_text()
-    success = llm.generate_and_save(
-        system_prompt="""Role: Audio Drama Script Optimizer & Emotion Labeler
-Task: Process the dialogue output from "1.prompt", optimize the text, and append emotion vectors and pause durations.
-Input:
-Output from "1.prompt", containing character profiles and dialogue:
-Character Info: {"name": "Name", "speaker_age": "Age Range", "speaker_sex": "Male/Female", "desc": "Description"}
-Dialogue Info: {"speaker": "Name", "content": "Content"}
-Processing Requirements:
-Only process dialogue lines containing speaker and text.
-Extract character attributes from the Character Info for emotion inference (do not output the profile info).
-Optimize the dialogue text regarding punctuation and phrasing (segmentation).
-Add emo_vector to every dialogue line.
-Output Format:
-Strict JSONL format, with one JSON object per line. Output only the dialogue parts.
-Field Definitions:
-speaker: Character name.
-content: Optimized dialogue content (Refine punctuation: ，。？！……"").
-emo_vector: [Happy, Angry, Sad, Fear, Disgust, Depressed, Surprise, Neutral]. Range: 0.0-1.0 (Keep 1 decimal place).
-Rules:
-Text Optimization: Segment sentences based on sense groups and breathing rhythm. Complete missing punctuation. Maintain the original meaning; only adjust punctuation and phrasing.
-Emotion Vector:
-Casual/Daily: 0.0 - 0.3
-Core Emotion: 0.4 - 0.7
-Intense Emotion: 0.7 - 0.8 (Use 0.9+ sparingly)
-Compound/Mixed emotions are allowed.
-
-Example:
-Input: {"speaker": "Elena", "content": "Do you always lack such a sense of propriety, Jack?"}
-Output: {"speaker": "Elena", "content": "Do you always lack such a sense of propriety, Jack?", "emo_vector": [0.0, 0.5, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0]}
-        """,
-        user_prompt="""{"name": "Sherlock Holmes", "speaker_age": "30-40", "speaker_sex": "Male", "desc": "A 30-40 year old male. His voice is a sharp, analytical baritone, with a crisp, articulate quality. His pacing is often rapid when laying out a theory, yet slow and deliberate when observing details, projecting an aura of intense intellectual focus and a touch of theatrical arrogance. He is currently in a state of high-focus and eager anticipation."}
-{"name": "Dr. Watson", "speaker_age": "30-40", "speaker_sex": "Male", "desc": "A 30-40 year old male. His voice is a warm, steady baritone that serves as a grounding counterpoint to Holmes. His speech is measured and thoughtful, conveying both his military background and his loyalty. He is currently feeling a mixture of tense apprehension and complete trust in his friend's abilities."}
-{"speaker": "Dr. Watson", "text": "(Whispering) Holmes, are you certain anything will happen? We've been sitting in this dreadful silence for hours."}
-{"speaker": "Sherlock Holmes", "text": "(Voice is a low, confident murmur) Patience, my dear Watson. Theatricality is the criminal's crutch. He cannot resist a performance."}
-{"speaker": "Narrator", "text": "A faint scraping sound echoes from the hallway, followed by the soft thud of something brushing against the door."}
-{"speaker": "Dr. Watson", "text": "(Startled) What was that?"}
-{"speaker": "Sherlock Holmes", "text": "That... is the sound of a boot scuffing the doorframe. A boot, I might add, carrying a significant amount of red clay from the garden bed beneath our client's window."}
-{"speaker": "Dr. Watson", "text": "The father's ghost?"}
-{"speaker": "Sherlock Holmes", "text": "A ghost with surprisingly solid footwear. And did you not notice the faint scent of sulphur when we first arrived? Almost like a spent firework."}
-{"speaker": "Dr. Watson", "text": "Good heavens, Holmes! You mean... gunpowder?"}
-{"speaker": "Sherlock Holmes", "text": "Precisely. A flash of light, a puff of smoke, a terrifying moan... it is a simple, yet effective, charade."}
-{"speaker": "Dr. Watson", "text": "So the man we are about to confront is..."}
-{"speaker": "Sherlock Holmes", "text": "No ghost, Watson. Just a greedy stepfather who has discovered his inheritance is not quite as forthcoming as he had hoped."}
-{"speaker": "Narrator", "text": "The brass doorknob begins to turn, slowly and silently."}
-{"speaker": "Sherlock Holmes", "text": "And I believe our performance is about to begin. Do have your service revolver ready."}
-        """,
-        output_path="2.jsonl"
-    )
-    print(f"Text generation: {'Success' if success else 'Failed'}")
-
     # Test audio evaluation
     # print("\nTesting audio evaluation...")
     # test_context = {
