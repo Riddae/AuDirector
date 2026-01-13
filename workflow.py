@@ -479,29 +479,6 @@ def main():
 
     workflow = AudioBookWorkflow()
 
-    # For demonstration, using hardcoded files
-    # In a real application, these would come from command line arguments
-    step1_file = "1.jsonl"
-    step2_file = "2.jsonl"
-    step4_file = "4.jsonl"
-
-    try:
-        # Execute the final mixing step (assuming previous steps are done)
-        final_mix_result = workflow.generate_final_mix(step4_file)
-
-        logger.info(f"Generation completed: {step2_file}")
-        logger.info(f"Final audio file located at: generated_audio/final_mix_master.wav")
-
-        # Print summary
-        print("\n=== Generation Summary ===")
-        print(f"Output directory: generated_audio")
-        print(f"Final mix: {final_mix_result.get('master', 'Not found')}")
-        print("========================\n")
-
-    except Exception as e:
-        logger.error(f"Execution failed: {e}")
-        exit(1)
-
 
 if __name__ == "__main__":
     main()
