@@ -29,7 +29,7 @@ Experiments demonstrate that AuDirector achieves superior performance compared t
 ### Setup
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Riddae/AuDirector.git
 cd AuDirector
 ```
 
@@ -115,10 +115,3 @@ Configure the following services in `config.json`:
 - Configurable temperature and token limits
 - Timeout settings for API calls
 
-## Citation
-
-
-
-## License
-
-[Add license information here]
