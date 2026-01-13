@@ -1,0 +1,46 @@
+{
+  "api": {
+    "tts": "http://100.99.10.4:8000/infer",
+    "tta": "http://100.99.10.4:8001/generate",
+    "timestamps": "http://100.99.10.4:8002/timestamps",
+    "mimoaudio": "http://100.99.10.4:8004",
+    "clap": "http://100.99.10.4:8005",
+    "speaker_matching": "http://100.99.10.4:8007/match",
+    "music_gen": "http://100.99.10.4:8003"
+  },
+  "audio": {
+    "format": "wav",
+    "supported_formats": [
+      "wav",
+      "mp3",
+      "flac"
+    ],
+    "default_gap_ms": 1500,
+    "fade_in_ms": 500,
+    "fade_out_ms": 500,
+    "master_fade_in_ms": 2000,
+    "master_fade_out_ms": 2000,
+    "tts_emotion_threshold": 92.0,
+    "tts_overall_threshold": 90.0,
+    "tts_max_retry": 2,
+    "bgm_threshold": 0.25,
+    "bgm_max_attempts": 3,
+    "sfx_threshold": 0.25,
+    "sfx_max_attempts": 4
+  },
+  "directories": {
+    "base_dir": "generated_audio",
+    "speech_dir": "generated_audio/speech",
+    "bgm_dir": "generated_audio/bgm",
+    "sfx_dir": "generated_audio/sfx",
+    "temp_dir": "temp"
+  },
+  "llm": {
+    "api_key": "sk-zKe7F6ua7N1tFGURNlIDKthaou0AzYD7dwVRNpuBTgimyfNr",
+    "base_url": "https://hiapi.online/v1",
+    "model_name": "gemini-2.5-pro",
+    "temperature": 0.8,
+    "max_tokens": 300000,
+    "timeout": 60
+  }
+}
