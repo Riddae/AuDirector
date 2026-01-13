@@ -1,12 +1,12 @@
 {
   "api": {
-    "tts": "http://100.99.10.4:8000/infer",
-    "tta": "http://100.99.10.4:8001/generate",
-    "timestamps": "http://100.99.10.4:8002/timestamps",
-    "mimoaudio": "http://100.99.10.4:8004",
-    "clap": "http://100.99.10.4:8005",
-    "speaker_matching": "http://100.99.10.4:8007/match",
-    "music_gen": "http://100.99.10.4:8003"
+    "tts": "",
+    "tta": "",
+    "timestamps": "",
+    "mimoaudio": "",
+    "clap": "",
+    "speaker_matching": "",
+    "music_gen": ""
   },
   "audio": {
     "format": "wav",
@@ -36,9 +36,9 @@
     "temp_dir": "temp"
   },
   "llm": {
-    "api_key": "sk-zKe7F6ua7N1tFGURNlIDKthaou0AzYD7dwVRNpuBTgimyfNr",
-    "base_url": "https://hiapi.online/v1",
-    "model_name": "gemini-2.5-pro",
+    "api_key": "",
+    "base_url": "",
+    "model_name": "",
     "temperature": 0.8,
     "max_tokens": 300000,
     "timeout": 60
