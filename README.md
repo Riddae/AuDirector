@@ -8,6 +8,9 @@ To address these challenges, we propose **AuDirector**, a self-reflective closed
 To enhance quality, a Collaborative Synthesis and Correction module introduces a closed-loop self-correction mechanism to systematically audit and regenerate defective audio components. Furthermore, a Human-Guided Interactive Refinement module facilitates user control by interpreting natural language feedback to interactively refine the underlying scripts.
 
 Experiments demonstrate that AuDirector achieves superior performance compared to state-of-the-art baselines in structural coherence, emotional expressiveness, and acoustic fidelity.
+## Framework Architecture
+
+![AuDirector Framework](demo/AuDirector.png)
 
 ## Key Features
 
@@ -80,30 +83,6 @@ if result.success:
 else:
     print(f"Generation failed: {result.message}")
 ```
-
-## Framework Architecture
-
-![AuDirector Framework](demo/AuDirector.png)
-
-AuDirector consists of three main modules:
-
-### 1. Identity-Aware Pre-Production
-- Transforms narrative texts into character profiles
-- Generates utterance-level emotional instructions
-- Retrieves semantically matched voice timbres
-- Builds dialogue scripts with emotional guidance
-
-### 2. Collaborative Synthesis and Correction
-- Synthesizes speech and synchronized sound/background music
-- Uses Critic agent to audit and regenerate low-quality samples
-- Integrates all audio tracks
-- Outputs final audio with closed-loop quality assurance
-
-### 3. Human-Guided Interactive Refinement
-- Interprets natural language feedback from users
-- Updates scripts based on user input
-- Triggers targeted regeneration of specific audio fragments
-- Enables interactive refinement of the final output
 
 ## Project Structure
 
