@@ -385,43 +385,5 @@ def speaker_matching(
 
 # Example calls (only enable during testing)
 if __name__ == "__main__":
-    # 1. TTA
-    # tta(
-    #     prompt="A single, clear ethereal Zen chime reverberating, as the heavy river waves gradually fade into a gentle, distant ripple and eventually silence",
-    #     output_wav="tta_sfx.wav",
-    #     steps=100,
-    #     duration=3.0,
-    #     seed=142,
-    #     negative_prompt="noise, distortion, low quality",
-    #     target_dbfs=-15.0
-    # )
-
-    # # 2. TTS
-    # tts(
-    #     text="Hey you! What are you shaking for? Do you want me to carry you over? Huh?",
-    #     emo_vector="[0.4, 0.1, 0.0, 0.0, 0.4, 0.0, 0.3, 0.0]",
-    #     prompt_path="/mnt/shared-storage-user/renyiming1/AudiobookAgent/cvd/swk.wav",
-    #     output_path="./outputs/audio/tts_gen.wav",
-    # )
-
-    # # 3. Timestamps
-    # timestamps(
-    #     "/mnt/shared-storage-user/renyiming1/AudiobookAgent/cvd/zbj.wav",
-    #     output_json="./outputs/json/timestamps.json",
-    # )
-
-    # # 4. MimoAudio
-    # mimoaudio(
-    #     audio_path="/mnt/shared-storage-user/renyiming1/AudiobookAgent/cvd/zbj.wav",
-    #     text="Please analyze the emotion of this audio from a vocal perspective.",
-    #     thinking=True,
-    # )
-
-    # 5. TTM
     ttm(prompt="Upbeat lo-fi hip hop podcast intro theme", output_path="musicgen_out.wav", max_new_tokens=1500)
 
-    # 6. Speaker Matching
-    # speaker_matching(
-    #     jsonl_content='{"name": "John Doe", "desc": "A 30-year-old young man"}',
-    #     output_path="./outputs/json/speakers.json"
-    # )
